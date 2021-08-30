@@ -3,4 +3,3 @@ def cualquier_funcion():
 
 if __name__ == '__main__':
     cualquier_funcion()
-    
