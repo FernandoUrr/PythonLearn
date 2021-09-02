@@ -62,6 +62,7 @@ def lambda_functions():
     return print(odd1, "- Con el filter ->", odd2), print(squares1,'- Esto es con map ->', squares2), print(all_multiplied, '- Esto es con reduce ->', all_multiplied2)
 
 
+
     
 
 def run():
@@ -71,9 +72,7 @@ def run():
     2. List comprehensions
     3. Dict comprehensions
     4. Lambda Functions and High Order Functions
-    5.
-    6.
-    7.
+    5. El resto de cosas revisarla en el ipython
     Selecciona una opción:
     """
     a = int(input(menu))
