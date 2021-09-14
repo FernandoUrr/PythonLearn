@@ -80,3 +80,26 @@ Range("D14:D39").Select
 Selection.ClearContents
 Range("D14").Select
 End Sub
+
+'Esta macro va a actualizar el formato de acuerdo con lo se especifique en la condición
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+    If Application.Intersect(Target, Range("G13")) Is Nothing Then
+        Exit Sub
+    Else
+        a = "Etapa 2: Parametrización Conjunta"
+        b = "Etapa 4: Cargue de información"
+        c = "Etapa 6: Socialización y capacitación"
+        d = Target.Value
+
+        If (d = a) Or (d = b) Or (d = c) Then
+            For i = 24 To 27
+                Worksheets("Control de Etapas").Rows(i).Hidden = True
+            Next
+        Else
+            For i = 24 To 27
+                Worksheets("Control de Etapas").Rows(i).Hidden = False
+            Next
+        End If
+    End If
+End Sub
