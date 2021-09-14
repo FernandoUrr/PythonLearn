@@ -81,7 +81,7 @@ Selection.ClearContents
 Range("D14").Select
 End Sub
 
-'Esta macro va a actualizar el formato de acuerdo con lo se especifique en la condición
+'Esta macro va a actualizar el formato de acuerdo con lo se especifique en la condición negativa, es decir en el Else
 
 Private Sub Worksheet_Change(ByVal Target As Range)
     If Application.Intersect(Target, Range("G13")) Is Nothing Then
